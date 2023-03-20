@@ -59,7 +59,8 @@ public class Neuron {
 		for(int i=0; i < listaNeuroni.size(); i++) {
 			if( coordX == listaNeuroni.get(i).coordonataX && coordY == listaNeuroni.get(i).coordonataY) {
 				loculDinLista=i;
-				System.out.println("verificOptiunileNeuronului() Neuron "+ listaNeuroni.get(i).coordonataX +","+listaNeuroni.get(i).coordonataY +" exista la pozitia "+i+ " ***");
+				System.out.println("verificOptiunileNeuronului() Neuron "+ listaNeuroni.get(i).coordonataX +","+listaNeuroni.get(i).coordonataY 
+						+" exista la pozitia "+i+ " ***");
 				if( listaNeuroni.get(i).optiuneaSus[0]==0 ) {
 					listaNeuroni.get(i).optiuneaSus[0] = 1; // marcam optiunea aleasa sau verificata
 					if( listaNeuroni.get(i).optiuneaSus[1] == 1 ) {
@@ -95,10 +96,14 @@ public class Neuron {
 			}
 		} 
 		System.out.println("Datele optiunilor dupa ce verificOptiunileNeuronului() ");
-		System.out.println("optiuneaSus[0]:"+listaNeuroni.get(loculDinLista).optiuneaSus[0]+ " optiuneaSus[1]:"+listaNeuroni.get(loculDinLista).optiuneaSus[1]);
-		System.out.println("optiuneaJos[0]:"+listaNeuroni.get(loculDinLista).optiuneaJos[0]+ " optiuneaJos[1]:"+listaNeuroni.get(loculDinLista).optiuneaJos[1]);
-		System.out.println("optiuneaStanga[0]:"+listaNeuroni.get(loculDinLista).optiuneaStanga[0]+ " optiuneaStanga[1]:"+listaNeuroni.get(loculDinLista).optiuneaStanga[1]);
-		System.out.println("optiuneaDreapta[0]:"+listaNeuroni.get(loculDinLista).optiuneaDreapta[0]+ " optiuneaDreapta[1]:"+listaNeuroni.get(loculDinLista).optiuneaDreapta[1]);
+		System.out.println("optiuneaSus[0]:"+listaNeuroni.get(loculDinLista).optiuneaSus[0]+ " optiuneaSus[1]:"
+		+listaNeuroni.get(loculDinLista).optiuneaSus[1]);
+		System.out.println("optiuneaJos[0]:"+listaNeuroni.get(loculDinLista).optiuneaJos[0]+ " optiuneaJos[1]:"
+		+listaNeuroni.get(loculDinLista).optiuneaJos[1]);
+		System.out.println("optiuneaStanga[0]:"+listaNeuroni.get(loculDinLista).optiuneaStanga[0]+ " optiuneaStanga[1]:"
+		+listaNeuroni.get(loculDinLista).optiuneaStanga[1]);
+		System.out.println("optiuneaDreapta[0]:"+listaNeuroni.get(loculDinLista).optiuneaDreapta[0]+ " optiuneaDreapta[1]:"
+		+listaNeuroni.get(loculDinLista).optiuneaDreapta[1]);
 		System.out.println("_______________________________________________");	
 		System.out.println("Rezultatul ales:" + resultat);
 		System.out.println("--------------------------------------------");
@@ -111,11 +116,16 @@ public class Neuron {
 		int rezultat=-1;
 		for(int i=0; i < listaNeuroni.size(); i++) {
 			if( coordX == listaNeuroni.get(i).coordonataX && coordY == listaNeuroni.get(i).coordonataY) {
-				System.out.println("obtineNeuron() la coordonatele X:" + listaNeuroni.get(i).coordonataX + " Y:" + listaNeuroni.get(i).coordonataY + " ne-am lovit si avem:");
-				System.out.println("Optiunea SUS    :" + listaNeuroni.get(i).optiuneaSus[0] + " posibila:" + listaNeuroni.get(i).optiuneaSus[1] );
-				System.out.println("Optiunea JOS    :" + listaNeuroni.get(i).optiuneaJos[0] + " posibila:" + listaNeuroni.get(i).optiuneaJos[1] );
-				System.out.println("Optiunea STANGA :" + listaNeuroni.get(i).optiuneaStanga[0] + " posibila:" + listaNeuroni.get(i).optiuneaStanga[1] );
-				System.out.println("Optiunea DREAPTA:" + listaNeuroni.get(i).optiuneaDreapta[0] + " posibila:" + listaNeuroni.get(i).optiuneaDreapta[1] );
+				System.out.println("obtineNeuron() la coordonatele X:" + listaNeuroni.get(i).coordonataX 
+						+ " Y:" + listaNeuroni.get(i).coordonataY + " ne-am lovit si avem:");
+				System.out.println("Optiunea SUS    :" + listaNeuroni.get(i).optiuneaSus[0] + " posibila:" 
+						+ listaNeuroni.get(i).optiuneaSus[1] );
+				System.out.println("Optiunea JOS    :" + listaNeuroni.get(i).optiuneaJos[0] + " posibila:" 
+						+ listaNeuroni.get(i).optiuneaJos[1] );
+				System.out.println("Optiunea STANGA :" + listaNeuroni.get(i).optiuneaStanga[0] + " posibila:" 
+						+ listaNeuroni.get(i).optiuneaStanga[1] );
+				System.out.println("Optiunea DREAPTA:" + listaNeuroni.get(i).optiuneaDreapta[0] + " posibila:" 
+						+ listaNeuroni.get(i).optiuneaDreapta[1] );
 				System.out.println("pozitia coincide la i="+i);
 			rezultat=i;
 			}

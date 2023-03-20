@@ -15,7 +15,6 @@ public class Inamic extends Entitate{
 	public int ecranY;
 	Panou panouJoc;
 	String sus1, sus2, jos1, jos2, stanga1, stanga2, dreapta1, dreapta2, personajul;
-	
 	//aici cream variabile ce ajuta la formarea creierului inamicului
 	boolean sus = false, jos = false, stanga= false, dreapta = false;
 	ArrayList<Neuron> creier = new ArrayList<>();
@@ -56,17 +55,13 @@ public class Inamic extends Entitate{
 	private void configuramValorileInitiale() {
 		worldX = panouJoc.marimeaDale * 10;
 		worldY = panouJoc.marimeaDale * 6;	
-		viteza = 2;
+		viteza = 3;
 		directia = "stanga";
 		inamicCastiga = false;
 	}
 	public Inamic(Panou panou ) {
 		this.panouJoc = panou;
 
-		// aceste valori nu le folosim la jumatatea ecranului deoarece doar jucatorul il desenam permanent acolo
-		//ecranX = 300; // panou.latimeEcran / 2 - (panou.marimeaDale/2);
-		//ecranY = 500; // panou.inaltimeEcran / 2 - (panou.marimeaDale/2);
-		
 		zonaSolida = new Rectangle(); 
 		zonaSolida.x = 12; 
 		zonaSolida.y = 12; 

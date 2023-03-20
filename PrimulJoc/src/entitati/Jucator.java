@@ -22,9 +22,8 @@ public class Jucator extends Entitate {
 	public Sunet fondSonor = new Sunet("/sunete/suspans.wav"); 
 	public Sunet sunetPremiu = new Sunet("/sunete/premiu.wav");
 	public Sunet sunetPierdut = new Sunet("/sunete/trist.wav");
-	String sus1, sus2, jos1, jos2, stanga1, stanga2, dreapta1, dreapta2, personajul;
-	//NOU
-	String invins;
+	String sus1, sus2, jos1, jos2, stanga1, stanga2, dreapta1, dreapta2, personajul, invins;
+
 	
 	public Jucator(Panou panou, GestionatorTaste gestiuneTaste) {
 		this.panouJoc = panou;
@@ -93,7 +92,6 @@ public class Jucator extends Entitate {
 			case "invins":
 				image = generica;
 			break;
-			// pana aici
 			case "sus":
 				if( numarImagine == 1) {
 					image = jucatorSus1;
@@ -139,7 +137,7 @@ public class Jucator extends Entitate {
 				this.viteza = 0;// NOU aici punem viteza jucatorului la 0 sa nu se mai poata misca
 			}
 		if( this.panouJoc.premiu.timpDa == false && this.panouJoc.premiu.inViata == true 
-				/* NOU*/|| this.panouJoc.inamic.inamicCastiga == true) {
+				|| this.panouJoc.inamic.inamicCastiga == true) {
 			g2.setColor(Color.GREEN);
 			g2.setFont(new Font("TimesRoman", Font.BOLD, 30));
 			g2.drawString("Ai pierdut  ... joc terminat!", 150 , 150);
@@ -149,7 +147,7 @@ public class Jucator extends Entitate {
 		}
 		g2.drawImage(image, ecranX, ecranY, panouJoc.marimeaDale, panouJoc.marimeaDale, null);
 		// NOU TEMPORARY COMMENT FOLLOWING LINE TO STOP SOUND
-		//this.fondSonor.clip.loop(Clip.LOOP_CONTINUOUSLY);
+		this.fondSonor.clip.loop(Clip.LOOP_CONTINUOUSLY);
 	}
 	
 	public void update() {
