@@ -1,0 +1,9 @@
+Declinare a răspunderii!
+Acest cod/proiect are scopul de a ajuta pe cei care învață Java
+dar responsabilitatea pentru modul în care este folosit este a
+persoanei care folosește acest cod pe propriul risc.
+
+Nu are niciun scop comercial ci doar gratuit și pentru scop
+pur auto didactic.
+
+
